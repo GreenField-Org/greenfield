@@ -12,13 +12,13 @@
  *
  * @return void
  */
-function twentytwentytwo_register_block_patterns() {
+function greenfield_register_block_patterns() {
 	$block_pattern_categories = array(
-		'featured' => array( 'label' => __( 'Featured', 'twentytwentytwo' ) ),
-		'footer'   => array( 'label' => __( 'Footers', 'twentytwentytwo' ) ),
-		'header'   => array( 'label' => __( 'Headers', 'twentytwentytwo' ) ),
-		'query'    => array( 'label' => __( 'Query', 'twentytwentytwo' ) ),
-		'pages'    => array( 'label' => __( 'Pages', 'twentytwentytwo' ) ),
+		'featured' => array( 'label' => __( 'Featured', 'greenfield' ) ),
+		'footer'   => array( 'label' => __( 'Footers', 'greenfield' ) ),
+		'header'   => array( 'label' => __( 'Headers', 'greenfield' ) ),
+		'query'    => array( 'label' => __( 'Query', 'greenfield' ) ),
+		'pages'    => array( 'label' => __( 'Pages', 'greenfield' ) ),
 	);
 
 	/**
@@ -36,7 +36,7 @@ function twentytwentytwo_register_block_patterns() {
 	 *     }
 	 * }
 	 */
-	$block_pattern_categories = apply_filters( 'twentytwentytwo_block_pattern_categories', $block_pattern_categories );
+	$block_pattern_categories = apply_filters( 'greenfield_block_pattern_categories', $block_pattern_categories );
 
 	foreach ( $block_pattern_categories as $name => $properties ) {
 		if ( ! WP_Block_Pattern_Categories_Registry::get_instance()->is_registered( $name ) ) {
@@ -121,15 +121,15 @@ function twentytwentytwo_register_block_patterns() {
 	 *
 	 * @param array $block_patterns List of block patterns by name.
 	 */
-	$block_patterns = apply_filters( 'twentytwentytwo_block_patterns', $block_patterns );
+	$block_patterns = apply_filters( 'greenfield_block_patterns', $block_patterns );
 
 	foreach ( $block_patterns as $block_pattern ) {
 		$pattern_file = get_theme_file_path( '/inc/patterns/' . $block_pattern . '.php' );
 
 		register_block_pattern(
-			'twentytwentytwo/' . $block_pattern,
+			'greenfield/' . $block_pattern,
 			require $pattern_file
 		);
 	}
 }
-add_action( 'init', 'twentytwentytwo_register_block_patterns', 9 );
+add_action( 'init', 'greenfield_register_block_patterns', 9 );
