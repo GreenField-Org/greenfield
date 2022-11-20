@@ -9,11 +9,11 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-Built on a solidly designed foundation, Twenty Twenty-Two embraces the idea that everyone deserves a truly unique website. The theme’s subtle styles are inspired by the diversity and versatility of birds: its typography is lightweight yet strong, its color palette is drawn from nature, and its layout elements sit gently on the page.
+Built on a solidly designed foundation, greenfield embraces the idea that everyone deserves a truly unique website. The theme’s subtle styles are inspired by the diversity and versatility of birds: its typography is lightweight yet strong, its color palette is drawn from nature, and its layout elements sit gently on the page.
 
-The true richness of Twenty Twenty-Two lies in its opportunity for customization. The theme is built to take advantage of the Site Editor features introduced in WordPress 5.9, which means that colors, typography, and the layout of every single page on your site can be customized to suit your vision. It also includes dozens of block patterns, opening the door to a wide range of professionally designed layouts in just a few clicks.
+The true richness of greenfield lies in its opportunity for customization. The theme is built to take advantage of the Site Editor features introduced in WordPress 5.9, which means that colors, typography, and the layout of every single page on your site can be customized to suit your vision. It also includes dozens of block patterns, opening the door to a wide range of professionally designed layouts in just a few clicks.
 
-Whether you’re building a single-page website, a blog, a business website, or a portfolio, Twenty Twenty-Two will help you create a site that is uniquely yours.
+Whether you’re building a single-page website, a blog, a business website, or a portfolio, greenfield will help you create a site that is uniquely yours.
 
 == Changelog ==
 
@@ -63,7 +63,7 @@ Block Pattern Images:
 
 "White Bellied Flycatcher" illustrated by Elizabeth Gould. Public Domain.
 https://www.rawpixel.com/image/321474/free-illustration-image-bird-vintage-birds
-Includes modified versions created specifically for Twenty Twenty-Two.
+Includes modified versions created specifically for greenfield.
 
 Colorful vintage hummingbird illustrations. CC0.
 https://www.rawpixel.com/image/2281674/free-illustration-image-bird-hummingbird-flying
@@ -81,4 +81,4 @@ https://www.rawpixel.com/image/3813787/illustration-image-flower-art-floral
 https://www.rawpixel.com/image/2053817/illustration-from-lanimal-dans-decoration
 Included as a short video clip.
 
-Modified versions of the above images, as well as additional "flight path" illustrations were created specifically for Twenty Twenty-Two. CC0.
+Modified versions of the above images, as well as additional "flight path" illustrations were created specifically for greenfield. CC0.
