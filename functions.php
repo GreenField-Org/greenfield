@@ -5,7 +5,7 @@
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
  * @package WordPress
- * @subpackage Twenty_Twenty_Two
+ * @subpackage Greenfield
  * @since Greenfield 1.0
  */
 
