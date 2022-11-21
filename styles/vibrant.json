@@ -1,32 +1,32 @@
 {
 	"version": 2,
-	"title": "Pink",
+	"title": "Vibrant",
 	"settings": {
 		"color": {
 			"palette": [
 				{
 					"slug": "foreground",
-					"color": "#CA2315",
+					"color": "#20A39E",
 					"name": "Foreground"
 				},
 				{
 					"slug": "background",
-					"color": "#FFF6F6",
+					"color": "#EF5B5B",
 					"name": "Background"
 				},
 				{
 					"slug": "primary",
-					"color": "#000000",
+					"color": "#FFBA49",
 					"name": "Primary"
 				},
 				{
 					"slug": "secondary",
-					"color": "#FFFFFF",
+					"color": "#23001E",
 					"name": "Secondary"
 				},
 				{
 					"slug": "tertiary",
-					"color": "#F5F5F5",
+					"color": "#A4A9AD",
 					"name": "Tertiary"
 				}
 			]
