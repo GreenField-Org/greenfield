@@ -225,7 +225,7 @@
 		"blocks": {
 			"core/button": {
 				"border": {
-					"radius": "0"
+					"radius": "10px"
 				},
 				"color": {
 					"background": "var(--wp--preset--color--primary)",
