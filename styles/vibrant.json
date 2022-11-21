@@ -11,12 +11,12 @@
 				},
 				{
 					"slug": "background",
-					"color": "#EF5B5B",
+					"color": "#FFBA49",
 					"name": "Background"
 				},
 				{
 					"slug": "primary",
-					"color": "#FFBA49",
+					"color": "#EF5B5B",
 					"name": "Primary"
 				},
 				{
