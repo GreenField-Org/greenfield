@@ -30,9 +30,9 @@ return array(
 					<!-- wp:paragraph -->
 					<p>' .
 					sprintf(
-						/* Translators: WordPress link. */
-						esc_html__( 'Proudly powered by %s', 'greenfield' ),
-						'<a href="' . esc_url( __( 'https://wordpress.org', 'greenfield' ) ) . '" rel="nofollow">WordPress</a>'
+						/* Translators: Greenfield link. */
+						esc_html__( 'Proudly created by %s', 'greenfield' ),
+						'<a href="' . esc_url( __( 'http://greenfield-dev-com.ibrave.host', 'greenfield' ) ) . '" rel="nofollow">GreenField Development</a>'
 					) . '</p>
 					<!-- /wp:paragraph --></div>
 					<!-- /wp:group --></div>

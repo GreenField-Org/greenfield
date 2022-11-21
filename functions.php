@@ -1,12 +1,12 @@
 <?php
 /**
- * Twenty Twenty-Two functions and definitions
+ * Greenfield functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
  * @package WordPress
- * @subpackage Twenty_Twenty_Two
- * @since Twenty Twenty-Two 1.0
+ * @subpackage Greenfield
+ * @since Greenfield 1.0
  */
 
 
@@ -15,7 +15,7 @@ if ( ! function_exists( 'greenfield_support' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
-	 * @since Twenty Twenty-Two 1.0
+	 * @since Greenfield 1.0
 	 *
 	 * @return void
 	 */
@@ -38,7 +38,7 @@ if ( ! function_exists( 'greenfield_styles' ) ) :
 	/**
 	 * Enqueue styles.
 	 *
-	 * @since Twenty Twenty-Two 1.0
+	 * @since Greenfield 1.0
 	 *
 	 * @return void
 	 */
