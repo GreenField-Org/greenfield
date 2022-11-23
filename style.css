@@ -1,148 +1,54 @@
 /*
-Theme Name: GreenField
-Theme URI: https://greenfield-dev.com
-Author: Greefield Development
-Author URI: https://greenfield-dev.com
-Description: Built on a solidly designed foundation, greenfield embraces the idea that everyone deserves a truly unique website. The theme’s subtle styles are inspired by the diversity and versatility of birds: its typography is lightweight yet strong, its color palette is drawn from nature, and its layout elements sit gently on the page. The true richness of greenfield lies in its opportunity for customization. The theme is built to take advantage of the Site Editor features introduced in WordPress 5.9, which means that colors, typography, and the layout of every single page on your site can be customized to suit your vision. It also includes dozens of block patterns, opening the door to a wide range of professionally designed layouts in just a few clicks. Whether you’re building a single-page website, a blog, a business website, or a portfolio, greenfield will help you create a site that is uniquely yours.
+Theme Name: greenfield
+Theme URI: https://github.com/GreenField-Org/greenfield
+Author: GreenField Development
+Author URI: http://greenfield-dev-com.ibrave.host/
+Description: A WordPress theme made with TailPress.
+Version: 0.1.0
 Requires at least: 5.9
 Tested up to: 6.1
 Requires PHP: 5.6
-Version: 1.3
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+License: MIT
+License URI: https://github.com/GreenField-Org/greenfield
 Text Domain: greenfield
-Tags: one-column, custom-colors, custom-menu, custom-logo, editor-style, featured-images, full-site-editing, block-patterns, rtl-language-support, sticky-post, threaded-comments, accessibility-ready
-
-greenfield WordPress Theme, (C) 2021 WordPress.org
-greenfield is distributed under the terms of the GNU GPL.
 */
-
-/*
- * Font smoothing.
- * This is a niche setting that will not be available via Global Styles.
- * https://github.com/WordPress/gutenberg/issues/35934
- */
-
-body {
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
+  
+/* waves */
+.ocean {
+height: 80px; /* change the height of the waves here */
+width: 100%;
+position: absolute;
+bottom: 0;
+left: 0;
+right: 0;
+overflow-x: hidden;
 }
 
-/*
- * Text and navigation link styles.
- * Necessary until the following issue is resolved in Gutenberg:
- * https://github.com/WordPress/gutenberg/issues/27075
- */
-
-a {
-	text-decoration-thickness: 1px;
-	text-underline-offset: 0.25ch;
+.wave {
+background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 88.7'%3E%3Cpath d='M800 56.9c-155.5 0-204.9-50-405.5-49.9-200 0-250 49.9-394.5 49.9v31.8h800v-.2-31.6z' fill='%23003F7C'/%3E%3C/svg%3E");
+position: absolute;
+width: 200%;
+height: 100%;
+animation: wave 10s -3s linear infinite;
+transform: translate3d(0, 0, 0);
+opacity: 0.8;
 }
 
-a:hover,
-a:focus {
-	text-decoration-style: dashed;
+.wave:nth-of-type(2) {
+bottom: 0;
+animation: wave 18s linear reverse infinite;
+opacity: 0.5;
 }
 
-a:active {
-	text-decoration: none;
+.wave:nth-of-type(3) {
+bottom: 0;
+animation: wave 20s -1s linear infinite;
+opacity: 0.5;
 }
 
-.wp-block-navigation .wp-block-navigation-item a:hover,
-.wp-block-navigation .wp-block-navigation-item a:focus {
-	text-decoration: underline;
-	text-decoration-style: solid;
+@keyframes wave {
+    0% {transform: translateX(0);}
+    50% {transform: translateX(-25%);}
+    100% {transform: translateX(-50%);}
 }
-
-/*
- * Search and File Block button styles.
- * Necessary until the following issues are resolved in Gutenberg:
- * https://github.com/WordPress/gutenberg/issues/36444
- * https://github.com/WordPress/gutenberg/issues/27760
- */
-
-.wp-block-search__button,
-.wp-block-file .wp-block-file__button {
-	background-color: var(--wp--preset--color--primary);
-	border-radius: 0;
-	border: none;
-	color: var(--wp--preset--color--background);
-	font-size: var(--wp--preset--font-size--medium);
-	padding: calc(.667em + 2px) calc(1.333em + 2px);
-}
-
-/*
- * Button hover styles.
- * Necessary until the following issue is resolved in Gutenberg:
- * https://github.com/WordPress/gutenberg/issues/27075
- */
-
-.wp-block-search__button:hover,
-.wp-block-file .wp-block-file__button:hover,
-.wp-block-button__link:hover {
-	opacity: 0.90;
-}
-
-/*
- * Alignment styles.
- * These rules are temporary, and should not be relied on or
- * modified too heavily by themes or plugins that build on
- * greenfield. These are meant to be a precursor to
- * a global solution provided by the Block Editor.
- *
- * Relevant issues:
- * https://github.com/WordPress/gutenberg/issues/35607
- * https://github.com/WordPress/gutenberg/issues/35884
- */
-
-.wp-site-blocks,
-body > .is-root-container,
-.edit-post-visual-editor__post-title-wrapper,
-.wp-block-group.alignfull,
-.wp-block-group.has-background,
-.wp-block-cover.alignfull,
-.is-root-container .wp-block[data-align="full"] > .wp-block-group,
-.is-root-container .wp-block[data-align="full"] > .wp-block-cover {
-	padding-left: var(--wp--custom--spacing--outer);
-	padding-right: var(--wp--custom--spacing--outer);
-}
-
-.wp-site-blocks .alignfull,
-.wp-site-blocks > .wp-block-group.has-background,
-.wp-site-blocks > .wp-block-cover,
-.wp-site-blocks > .wp-block-template-part > .wp-block-group.has-background,
-.wp-site-blocks > .wp-block-template-part > .wp-block-cover,
-body > .is-root-container > .wp-block-cover,
-body > .is-root-container > .wp-block-template-part > .wp-block-group.has-background,
-body > .is-root-container > .wp-block-template-part > .wp-block-cover,
-.is-root-container .wp-block[data-align="full"] {
-	margin-left: calc(-1 * var(--wp--custom--spacing--outer)) !important;
-	margin-right: calc(-1 * var(--wp--custom--spacing--outer)) !important;
-	width: unset;
-}
-
-/* Blocks inside columns don't have negative margins. */
-.wp-site-blocks .wp-block-columns .wp-block-column .alignfull,
-.is-root-container .wp-block-columns .wp-block-column .wp-block[data-align="full"],
-/* We also want to avoid stacking negative margins. */
-.wp-site-blocks .alignfull:not(.wp-block-group) .alignfull,
-.is-root-container .wp-block[data-align="full"] > *:not(.wp-block-group) .wp-block[data-align="full"] {
-	margin-left: auto !important;
-	margin-right: auto !important;
-	width: inherit;
-}
-
-/*
- * Responsive menu container padding.
- * This ensures the responsive container inherits the same
- * spacing defined above. This behavior may be built into
- * the Block Editor in the future.
- */
-
-.wp-block-navigation__responsive-container.is-menu-open {
-	padding-top: var(--wp--custom--spacing--outer);
-	padding-bottom: var(--wp--custom--spacing--large);
-	padding-right: var(--wp--custom--spacing--outer);
-	padding-left: var(--wp--custom--spacing--outer);
-}
-
+  

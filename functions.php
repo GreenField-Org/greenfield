@@ -1,67 +1,109 @@
 <?php
+
 /**
- * Greenfield functions and definitions
- *
- * @link https://developer.wordpress.org/themes/basics/theme-functions/
- *
- * @package WordPress
- * @subpackage Greenfield
- * @since Greenfield 1.0
+ * Theme setup.
  */
+function example_theme_setup() {
+	add_theme_support( 'title-tag' );
 
+	register_nav_menus(
+		array(
+			'primary' => __( 'Primary Menu', 'tailpress' ),
+		)
+	);
 
-if ( ! function_exists( 'greenfield_support' ) ) :
+	add_theme_support(
+		'html5',
+		array(
+			'search-form',
+			'comment-form',
+			'comment-list',
+			'gallery',
+			'caption',
+		)
+	);
 
-	/**
-	 * Sets up theme defaults and registers support for various WordPress features.
-	 *
-	 * @since Greenfield 1.0
-	 *
-	 * @return void
-	 */
-	function greenfield_support() {
+    add_theme_support( 'custom-logo' );
+	add_theme_support( 'post-thumbnails' );
 
-		// Add support for block styles.
-		add_theme_support( 'wp-block-styles' );
+	add_theme_support( 'align-wide' );
+	add_theme_support( 'wp-block-styles' );
 
-		// Enqueue editor styles.
-		add_editor_style( 'style.css' );
+	add_theme_support( 'editor-styles' );
+	add_editor_style( 'css/editor-style.css' );
+}
 
+add_action( 'after_setup_theme', 'example_theme_setup' );
+
+/**
+ * Enqueue theme assets.
+ */
+function example_theme_enqueue_scripts() {
+	$theme = wp_get_theme();
+
+	wp_enqueue_style( 'tailpress', example_theme_asset( 'css/app.css' ), array(), $theme->get( 'Version' ) );
+	wp_enqueue_script( 'tailpress', example_theme_asset( 'js/app.js' ), array(), $theme->get( 'Version' ) );
+}
+
+add_action( 'wp_enqueue_scripts', 'example_theme_enqueue_scripts' );
+
+/**
+ * Get asset path.
+ *
+ * @param string  $path Path to asset.
+ *
+ * @return string
+ */
+function example_theme_asset( $path ) {
+	if ( wp_get_environment_type() === 'production' ) {
+		return get_stylesheet_directory_uri() . '/' . $path;
 	}
 
-endif;
+	return add_query_arg( 'time', time(),  get_stylesheet_directory_uri() . '/' . $path );
+}
 
-add_action( 'after_setup_theme', 'greenfield_support' );
-
-if ( ! function_exists( 'greenfield_styles' ) ) :
-
-	/**
-	 * Enqueue styles.
-	 *
-	 * @since Greenfield 1.0
-	 *
-	 * @return void
-	 */
-	function greenfield_styles() {
-		// Register theme stylesheet.
-		$theme_version = wp_get_theme()->get( 'Version' );
-
-		$version_string = is_string( $theme_version ) ? $theme_version : false;
-		wp_register_style(
-			'greenfield-style',
-			get_template_directory_uri() . '/style.css',
-			array(),
-			$version_string
-		);
-
-		// Enqueue theme stylesheet.
-		wp_enqueue_style( 'greenfield-style' );
-
+/**
+ * Adds option 'li_class' to 'wp_nav_menu'.
+ *
+ * @param string  $classes String of classes.
+ * @param mixed   $item The curren item.
+ * @param WP_Term $args Holds the nav menu arguments.
+ *
+ * @return array
+ */
+function example_theme_nav_menu_add_li_class( $classes, $item, $args, $depth ) {
+	if ( isset( $args->li_class ) ) {
+		$classes[] = $args->li_class;
 	}
 
-endif;
+	if ( isset( $args->{"li_class_$depth"} ) ) {
+		$classes[] = $args->{"li_class_$depth"};
+	}
 
-add_action( 'wp_enqueue_scripts', 'greenfield_styles' );
+	return $classes;
+}
 
-// Add block patterns
-require get_template_directory() . '/inc/block-patterns.php';
+add_filter( 'nav_menu_css_class', 'example_theme_nav_menu_add_li_class', 10, 4 );
+
+/**
+ * Adds option 'submenu_class' to 'wp_nav_menu'.
+ *
+ * @param string  $classes String of classes.
+ * @param mixed   $item The curren item.
+ * @param WP_Term $args Holds the nav menu arguments.
+ *
+ * @return array
+ */
+function example_theme_nav_menu_add_submenu_class( $classes, $args, $depth ) {
+	if ( isset( $args->submenu_class ) ) {
+		$classes[] = $args->submenu_class;
+	}
+
+	if ( isset( $args->{"submenu_class_$depth"} ) ) {
+		$classes[] = $args->{"submenu_class_$depth"};
+	}
+
+	return $classes;
+}
+
+add_filter( 'nav_menu_submenu_css_class', 'example_theme_nav_menu_add_submenu_class', 10, 3 );
