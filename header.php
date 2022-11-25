@@ -79,7 +79,7 @@
 				<p class="max-w-screen-lg text-gray-700 text-lg font-medium mb-10">greenfield is your go-to starting
 					point for developing WordPress themes with TailwindCSS and comes with basic block-editor support out
 					of the box.</p>
-				<a href="https://github.com/jeffreyvr/greenfield"
+				<a href="https://github.com/GreenField-Org/greenfield"
 					class="w-full sm:w-auto flex-none bg-gray-900 text-white text-lg leading-6 font-semibold py-3 px-6 border border-transparent rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-gray-900 focus:outline-none transition-colors duration-200">View
 					on Github</a>
 			</div>
