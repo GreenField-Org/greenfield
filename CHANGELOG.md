@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to TailPress will be documented in this file.
+All notable changes to greenfield will be documented in this file.
 
 ## Unreleased
 
@@ -17,18 +17,18 @@ All notable changes to TailPress will be documented in this file.
 
 - Updating Tailwind to 3.0.0.
 
-### TailPress installer
+### greenfield installer
 
-- The TailPress installer (^0.2.0) now allows you to use Laravel Mix instead of esbuild by setting --compiler=mix.
+- The greenfield installer (^0.2.0) now allows you to use Laravel Mix instead of esbuild by setting --compiler=mix.
 - You may now also set dbname, dbuser, dbpass and dbhost.
 
 ## 2.0.0 - 2021-09-03
 
 - Switching to Tailwind CLI and esbuild instead of LaraveL Mix.
 - Removing `theme` subdirectory setup as it is no longer needed with the new build setup.
-- Removing `TailPress` class and it's functions (`tailpress()->get_header()` etc.) throughout the theme.
-- New `tailpress_asset` function to get the URL of an asset (previously `tailpress_mix`).
-- `tailpress_asset` function thaty appends a `time` parameter if [wp_get_environment_type()](https://developer.wordpress.org/reference/functions/wp_get_environment_type/) does not return `production` for cache busting (instead of the previously used versioned assets through `mix-manifest.json`).
+- Removing `greenfield` class and it's functions (`greenfield()->get_header()` etc.) throughout the theme.
+- New `greenfield_asset` function to get the URL of an asset (previously `greenfield_mix`).
+- `greenfield_asset` function thaty appends a `time` parameter if [wp_get_environment_type()](https://developer.wordpress.org/reference/functions/wp_get_environment_type/) does not return `production` for cache busting (instead of the previously used versioned assets through `mix-manifest.json`).
 - Update screenshot.png.
 - Remove `block-editor.css`, only use `editor-style.css`.
 - Moving `editor-style.css` from root to `css` directory.
@@ -36,9 +36,9 @@ All notable changes to TailPress will be documented in this file.
 
 ## 1.0.0 - 2021-08-25
 
-- Replace `tailpress.json` with `theme.json` as used by WordPress core.
+- Replace `greenfield.json` with `theme.json` as used by WordPress core.
 - Move template files into `theme` subdirectory.
-- Move tailwind plugin to a [separate repository](https://github.com/jeffreyvr/tailwindcss-tailpress).
+- Move tailwind plugin to a [separate repository](https://github.com/jeffreyvr/tailwindcss-greenfield).
 - Update readme and adding section on using installer.
 
 ## 0.1.0 - 2021-06-17
@@ -83,8 +83,8 @@ All notable changes to TailPress will be documented in this file.
 - Update Laravel Mix from version 5^ to 6^.
 - Removing Laravel Mix Tailwind, defining plugins within webpack.mix.js instead.
 - Switching from Sass to PostCSS for faster compiling.
-- Moved TailPress colors and font size settings to tailpress.json file.
-- Use tailpress.json to populate editor-color-palette and editor-font-sizes theme support automatically.
+- Moved greenfield colors and font size settings to greenfield.json file.
+- Use greenfield.json to populate editor-color-palette and editor-font-sizes theme support automatically.
 - New screenshot.
 - Update readme.
 - Other minor fixes and improvements.

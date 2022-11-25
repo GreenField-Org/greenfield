@@ -3,12 +3,12 @@
 /**
  * Theme setup.
  */
-function example_theme_setup() {
+function greenfield_theme_setup() {
 	add_theme_support( 'title-tag' );
 
 	register_nav_menus(
 		array(
-			'primary' => __( 'Primary Menu', 'tailpress' ),
+			'primary' => __( 'Primary Menu', 'greenfield' ),
 		)
 	);
 
@@ -30,22 +30,23 @@ function example_theme_setup() {
 	add_theme_support( 'wp-block-styles' );
 
 	add_theme_support( 'editor-styles' );
+	add_theme_support( 'block-templates' );
 	add_editor_style( 'css/editor-style.css' );
 }
 
-add_action( 'after_setup_theme', 'example_theme_setup' );
+add_action( 'after_setup_theme', 'greenfield_theme_setup' );
 
 /**
  * Enqueue theme assets.
  */
-function example_theme_enqueue_scripts() {
+function greenfield_theme_enqueue_scripts() {
 	$theme = wp_get_theme();
 
-	wp_enqueue_style( 'tailpress', example_theme_asset( 'css/app.css' ), array(), $theme->get( 'Version' ) );
-	wp_enqueue_script( 'tailpress', example_theme_asset( 'js/app.js' ), array(), $theme->get( 'Version' ) );
+	wp_enqueue_style( 'greenfield', greenfield_theme_asset( 'css/app.css' ), array(), $theme->get( 'Version' ) );
+	wp_enqueue_script( 'greenfield', greenfield_theme_asset( 'js/app.js' ), array(), $theme->get( 'Version' ) );
 }
 
-add_action( 'wp_enqueue_scripts', 'example_theme_enqueue_scripts' );
+add_action( 'wp_enqueue_scripts', 'greenfield_theme_enqueue_scripts' );
 
 /**
  * Get asset path.
@@ -54,7 +55,7 @@ add_action( 'wp_enqueue_scripts', 'example_theme_enqueue_scripts' );
  *
  * @return string
  */
-function example_theme_asset( $path ) {
+function greenfield_theme_asset( $path ) {
 	if ( wp_get_environment_type() === 'production' ) {
 		return get_stylesheet_directory_uri() . '/' . $path;
 	}
@@ -71,7 +72,7 @@ function example_theme_asset( $path ) {
  *
  * @return array
  */
-function example_theme_nav_menu_add_li_class( $classes, $item, $args, $depth ) {
+function greenfield_theme_nav_menu_add_li_class( $classes, $item, $args, $depth ) {
 	if ( isset( $args->li_class ) ) {
 		$classes[] = $args->li_class;
 	}
@@ -83,7 +84,7 @@ function example_theme_nav_menu_add_li_class( $classes, $item, $args, $depth ) {
 	return $classes;
 }
 
-add_filter( 'nav_menu_css_class', 'example_theme_nav_menu_add_li_class', 10, 4 );
+add_filter( 'nav_menu_css_class', 'greenfield_theme_nav_menu_add_li_class', 10, 4 );
 
 /**
  * Adds option 'submenu_class' to 'wp_nav_menu'.
@@ -94,7 +95,7 @@ add_filter( 'nav_menu_css_class', 'example_theme_nav_menu_add_li_class', 10, 4 )
  *
  * @return array
  */
-function example_theme_nav_menu_add_submenu_class( $classes, $args, $depth ) {
+function greenfield_theme_nav_menu_add_submenu_class( $classes, $args, $depth ) {
 	if ( isset( $args->submenu_class ) ) {
 		$classes[] = $args->submenu_class;
 	}
@@ -106,4 +107,4 @@ function example_theme_nav_menu_add_submenu_class( $classes, $args, $depth ) {
 	return $classes;
 }
 
-add_filter( 'nav_menu_submenu_css_class', 'example_theme_nav_menu_add_submenu_class', 10, 3 );
+add_filter( 'nav_menu_submenu_css_class', 'greenfield_theme_nav_menu_add_submenu_class', 10, 3 );

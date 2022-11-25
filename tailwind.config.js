@@ -1,5 +1,5 @@
 const theme = require('./theme.json');
-const tailpress = require("@jeffreyvr/tailwindcss-tailpress");
+const greenfield = require("@jeffreyvr/tailwindcss-greenfield");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -19,19 +19,19 @@ module.exports = {
             },
         },
         extend: {
-            colors: tailpress.colorMapper(tailpress.theme('settings.color.palette', theme)),
-            fontSize: tailpress.fontSizeMapper(tailpress.theme('settings.typography.fontSizes', theme))
+            colors: greenfield.colorMapper(greenfield.theme('settings.color.palette', theme)),
+            fontSize: greenfield.fontSizeMapper(greenfield.theme('settings.typography.fontSizes', theme))
         },
         screens: {
             'xs': '480px',
             'sm': '600px',
             'md': '782px',
-            'lg': tailpress.theme('settings.layout.contentSize', theme),
-            'xl': tailpress.theme('settings.layout.wideSize', theme),
+            'lg': greenfield.theme('settings.layout.contentSize', theme),
+            'xl': greenfield.theme('settings.layout.wideSize', theme),
             '2xl': '1440px'
         }
     },
     plugins: [
-        tailpress.tailwind
+        greenfield.tailwind
     ]
 };
