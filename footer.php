@@ -1,4 +1,3 @@
-
 </main>
 
 <?php do_action( 'greenfield_theme_content_end' ); ?>
@@ -7,7 +6,7 @@
 
 <?php do_action( 'greenfield_theme_content_after' ); ?>
 
-<footer id="colophon" class="site-footer bg-green-700 py-12" role="contentinfo">
+<footer id="colophon" class="site-footer bg-lime-700 py-12" role="contentinfo">
 	<?php do_action( 'greenfield_theme_footer' ); ?>
 
 	<div class="container mx-auto text-center text-white">

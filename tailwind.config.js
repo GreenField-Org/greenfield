@@ -1,5 +1,5 @@
 const theme = require('./theme.json');
-const greenfield = require("@jeffreyvr/tailwindcss-greenfield");
+const greenfield = require("@jeffreyvr/tailwindcss-tailpress");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
