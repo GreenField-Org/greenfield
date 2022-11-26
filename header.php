@@ -73,15 +73,11 @@
 		<?php if ( is_front_page() ) { ?>
 			<!-- Start introduction -->
 			<div class="container mx-auto my-12 border-b pb-12">
-				<h1 class="font-bold text-lg text-secondary uppercase">Greenfield Theme with Tailwind CSS</h1>
-				<h2 class="text-3xl lg:text-7xl tracking-tight font-extrabold my-4">Rapidly build your WordPress theme
-					with <a href="https://tailwindcss.com" class="text-primary">Tailwind CSS</a>.</h2>
-				<p class="max-w-screen-lg text-gray-700 text-lg font-medium mb-10">greenfield is your go-to starting
-					point for developing WordPress themes with TailwindCSS and comes with basic block-editor support out
-					of the box.</p>
+				<h1 class="font-bold text-lg text-secondary uppercase">GreenField Development</h1>
+				<h2 class="text-3xl lg:text-7xl tracking-tight font-extrabold my-4">Building software solutions to fit your needs.</h2>
+				<p class="max-w-screen-lg text-gray-700 text-lg font-medium mb-10">A team of Software Engineers and Web Developers who will work with you to solve your companies needs with the technologies which best fit your requirements.</p>
 				<a href="https://github.com/GreenField-Org/greenfield"
-					class="w-full sm:w-auto flex-none bg-gray-900 text-white text-lg leading-6 font-semibold py-3 px-6 border border-transparent rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-gray-900 focus:outline-none transition-colors duration-200">View
-					on Github</a>
+					class="w-full sm:w-auto flex-none bg-green-900 text-white text-lg leading-6 font-semibold py-3 px-6 border border-transparent rounded-xl focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-gray-900 focus:outline-none transition-colors duration-200">Schedule a meeting</a>
 			</div>
 			<!-- End introduction -->
 		<?php } ?>
